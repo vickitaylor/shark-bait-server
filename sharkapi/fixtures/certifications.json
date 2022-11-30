@@ -1,0 +1,16 @@
+[
+    {
+        "model": "sharkapi.certification",
+        "pk": 1,
+        "fields": {
+            "depth": 60
+        }
+    },
+    {
+        "model": "sharkapi.certification",
+        "pk": 2,
+        "fields": {
+            "depth": 120
+        }
+    }
+]

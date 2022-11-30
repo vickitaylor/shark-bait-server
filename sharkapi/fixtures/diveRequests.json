@@ -1,0 +1,100 @@
+[
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 1,
+        "fields": {
+            "diver": 1,
+            "dive_site": 5,
+            "date": "2022-07-01",
+            "certification": 2,
+            "comments": "date changed",
+            "completed": true,
+            "completed_comments": "Best Ever! Saw so many parrotfish.",
+            "rating": 4
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 2,
+        "fields": {
+            "diver": 4,
+            "dive_site": 6,
+            "date": "2022-06-27",
+            "certification": 1,
+            "comments": "",
+            "completed": true,
+            "completed_comments": "So much coral to see",
+            "rating": 5
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 3,
+        "fields": {
+            "diver": 1,
+            "dive_site": 2,
+            "date": "2022-07-30",
+            "certification": 1,
+            "comments": "",
+            "completed": false,
+            "completed_comments": "",
+            "rating": null
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 4,
+        "fields": {
+            "diver": 7,
+            "dive_site": 3,
+            "date": "2022-07-06",
+            "certification": 1,
+            "comments": "Changed the date",
+            "completed": false,
+            "completed_comments": "",
+            "rating": null
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 5,
+        "fields": {
+            "diver": 7,
+            "dive_site": 5,
+            "date": "2022-07-23",
+            "certification": 2,
+            "comments": "",
+            "completed": false,
+            "completed_comments": "",
+            "rating": null
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 6,
+        "fields": {
+            "diver": 3,
+            "dive_site": 2,
+            "date": "2022-06-28",
+            "certification": 1,
+            "comments": "",
+            "completed": true,
+            "completed_comments": "Had so much fun swimming thru the tunnels.",
+            "rating": 5
+        }
+    },
+    {
+        "model": "sharkapi.diverequest",
+        "pk": 7,
+        "fields": {
+            "diver": 6,
+            "dive_site": 3,
+            "date": "2022-07-01",
+            "certification": 1,
+            "comments": "",
+            "completed": true,
+            "completed_comments": "Found a tiger shark and pulled on its tail. I don't know why it bit me.",
+            "rating": 1
+        }
+    }
+]

@@ -1,0 +1,106 @@
+[
+    {
+        "model": "sharkapi.divesite",
+        "pk": 1,
+        "fields": {
+            "name": "Molasses Reef",
+            "price": 120,
+            "depth": 40,
+            "description": "Extensive reef complex that has the best collection of reefs in Florida.",
+            "picture_url": "images/Molasses.jpeg",
+            "fun_facts": "Local legend suggests Molasses is named for a barge that grounded here many years ago carrying a cargo of molasses barrels, but much of the strewn wreckage is probably from a wooden hulled Austrian ship that run aground in 1887.",
+            "will_see": "Colorful Snappers, Angelfish, Spadefish, and Parrotfish."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 2,
+        "fields": {
+            "name": "French Reef",
+            "price": 140,
+            "depth": 100,
+            "description": "Reef area with multiple ledges, tunnels, caves, and other unusual structures.",
+            "picture_url": "images/French.jpg",
+            "fun_facts": "Swim thru one of the large tunnels.",
+            "will_see": "Soft Corals, Seafans and Sea Plumes, Yellowtails, Porkfish, Moray Eels, Cooper Sweepers and Grunts."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 3,
+        "fields": {
+            "name": "Pickles Reef",
+            "price": 110,
+            "depth": 25,
+            "description": "Large and shallow reef with coral formed on pickle barrels.",
+            "picture_url": "images/Pickles.jpg",
+            "fun_facts": "Pickle barrels are on site after they were filled with cement and sunk in the 1860s.",
+            "will_see": "Spiny Lobsters, Grunts, Snappers, Goatfish, and Sergeant Majors."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 4,
+        "fields": {
+            "name": "Carysfort Lighthouse",
+            "price": 135,
+            "depth": 80,
+            "description": "Wide variety of corals at one of the oldest functioning lighthouse.",
+            "picture_url": "images/Craysfort.jpg",
+            "fun_facts": "Carysfort Reef the frigate HMS Carysfort, which ran aground in 1770.",
+            "will_see": "Magnificent coral and plenty of fish."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 5,
+        "fields": {
+            "name": "Benwood Wreck",
+            "price": 130,
+            "depth": 55,
+            "description": "WWII shipwreck with bioluminescent creatures seen at night.",
+            "picture_url": "images/Benwood.jpg",
+            "fun_facts": "Subject to controversy, the ship most likely sank in WWII due to traveling completely blacked out to avoid German U-boats and collided with the Tuttle.",
+            "will_see": "At night- Sea Turtles and eels swimming with lobsters scurrying around for food. Also look for Parrot Fish making their cocoons in the skeletal spars of the ship."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 6,
+        "fields": {
+            "name": "Sombrero Reef",
+            "price": 115,
+            "depth": 30,
+            "description": "Largest coral reef in the Middle Keys.",
+            "picture_url": "https://www.starfishsnorkeling.com/wp-content/uploads/2016/10/iStock_62306274_MEDIUM-1030x686.jpg",
+            "fun_facts": "Once a diver was left behind and clung to the rocks all night before being rescued. Dive with us so you will not be left behind.",
+            "will_see": "Parrotfish feeding on the living coral while trumpetfish try to blend in among the coral branches. Also large schools of grunts and snappers swimming among large grouper."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 7,
+        "fields": {
+            "name": "Christ of the Abyss",
+            "price": 115,
+            "depth": 60,
+            "description": "One of the most famous and visited underwater sites on earth. Come see the 8.5 foot bronze sculpture.",
+            "picture_url": "https://img.atlasobscura.com/G9_cOduWbqjuwvUNFuNT1tRllB9RanNA9fMVP4sEAlw/rs:fill:780:520:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy81MzY5/ZDFmNy03YjFhLTQ4/ODMtOWU5ZC05NGRm/ZWY4ZWM2ODYyY2Zl/Y2YzMDAwYmNkNDZh/MTdfQ2hyaXN0X29m/X3RoZV9BYnlzc18x/LmpwZw.jpg",
+            "fun_facts": "The status is identical to one in the Med of the coast of Italy.",
+            "will_see":"Barracuda, Rays, and sometimes weddings."
+        }
+    },
+    {
+        "model": "sharkapi.divesite",
+        "pk": 8,
+        "fields": {
+            "name": "Pennyroyal Blue Springs Park- Hopkinsville, Ky",
+            "price": 75,
+            "depth": 130,
+            "description": "When you are stuck in Nashville and want to go diving.",
+            "picture_url": "images/penny.jpg",
+            "fun_facts": "In the 2013 East Nashville Film Festival film award nominated movie \"The Truck\".  The truck filmed going over the cliff was filmed at and landed in at the bottom of the quarry.  ",
+            "will_see": "Planes, Trucks, Vans, RV, Shark, Dinosaur Bones, Bus, Bikes, Helicopter, and so much more.  And lets not forgot the infamous quarry piranha (aka Bluegill)."
+        }
+    }
+]

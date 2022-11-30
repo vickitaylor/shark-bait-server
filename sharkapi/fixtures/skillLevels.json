@@ -1,0 +1,30 @@
+[
+    {
+        "model": "sharkapi.skilllevel",
+        "pk": 1,
+        "fields": {
+            "skill": "Beginner"
+        }
+    },
+    {
+        "model": "sharkapi.skilllevel",
+        "pk": 2,
+        "fields": {
+            "skill": "Intermediate"
+        }
+    },
+    {
+        "model": "sharkapi.skilllevel",
+        "pk": 3,
+        "fields": {
+            "skill": "Proficient"
+        }
+    },
+    {
+        "model": "sharkapi.skilllevel",
+        "pk": 4,
+        "fields": {
+            "skill": "Employee"
+        }
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "model": "sharkapi.diver",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "skill_level": 2
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "skill_level": 4
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "skill_level": 1
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "skill_level": 3
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "skill_level": 4
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "skill_level": 1
+        }
+    },
+    {
+        "model": "sharkapi.diver",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "skill_level": 3
+        }
+    }
+]

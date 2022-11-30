@@ -1,0 +1,128 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "AnnChovy",
+            "first_name": "Ann",
+            "last_name": "Chovy",
+            "email": "ann@chovy.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "TunaTurner",
+            "first_name": "Tuna",
+            "last_name": "Turner",
+            "email": "tuna@turner.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-08-04 22:03:24.533024",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SushiSea",
+            "first_name": "Sushi",
+            "last_name": "Sea",
+            "email": "sushi@sea.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-05 03:38:07.804353",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "PhishStyx",
+            "first_name": "Phish",
+            "last_name": "Styx",
+            "email": "phish@styx.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-05 03:38:07.804353",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "JamesPond",
+            "first_name": "James",
+            "last_name": "Pond",
+            "email": "james@pond.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-08-05 03:38:07.804353",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "BubbleFett",
+            "first_name": "Bubble",
+            "last_name": "Fett",
+            "email": "bubble@fett.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-05 03:38:07.804353",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SwimShady",
+            "first_name": "Swim",
+            "last_name": "Shady",
+            "email": "swim@shady.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-05 03:38:07.804353",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
