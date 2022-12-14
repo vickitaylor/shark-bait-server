@@ -34,3 +34,17 @@ class CertificationView(ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Certification.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+    def create(self, request):
+        """ Is the POST to create a new certification 
+
+        Returns:
+            Response: JSON serialized certification instance
+        """
+
+        cert = Certification.objects.create(
+            depth=request.data["depth"]
+        )
+
+        serializer = CertificationSerializer(cert)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

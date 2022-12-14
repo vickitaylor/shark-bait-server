@@ -34,3 +34,23 @@ class DiveSiteView(ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except DiveSite.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+    def create(self, request):
+        """ Is the POST to create a new dive site
+
+        Returns:
+            Response: JSON serialized dive site instance
+        """
+
+        site = DiveSite.objects.create(
+            name=request.data["name"],
+            price=request.data["price"],
+            depth=request.data['depth'],
+            description=request.data["description"],
+            picture_url=request.data["picture_url"],
+            fun_facts=request.data["fun_facts"],
+            will_see=request.data["will_see"]
+        )
+
+        serializer = DiveSiteSerializer(site)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

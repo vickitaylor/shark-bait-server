@@ -35,3 +35,17 @@ class SkillLevelView(ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except SkillLevel.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+    def create(self, request):
+        """ Is the POST to create a new skill level
+
+        Returns:
+            Response: JSON serialized skill level instance
+        """
+
+        skill = SkillLevel.objects.create(
+            skill=request.data["skill"]
+        )
+
+        serializer = SkillLevelSerializer(skill)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
