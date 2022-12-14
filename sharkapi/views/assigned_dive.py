@@ -17,6 +17,21 @@ class AssignedDiveView(ViewSet):
             Response: JSON serialized list of Assigned Dives
         """
 
-        AssignedDives = AssignedDive.objects.all().order_by("dive_request__date")
-        serializer = AssignedDiveSerializer(AssignedDives, many=True)
+        assigned_dives = AssignedDive.objects.all().order_by("dive_request__date")
+        serializer = AssignedDiveSerializer(assigned_dives, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+    def retrieve(self, request, pk):
+        """ Handles the GET request to a single assigned dive, if the selected key is not found 404 is returned
+
+        Returns:
+            Response:JSON serialized list of the dive for the selected key
+        """
+
+        try:
+            assigned_dive = AssignedDive.objects.get(pk=pk)
+            serializer = AssignedDiveSerializer(assigned_dive)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except assigned_dive.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
