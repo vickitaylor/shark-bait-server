@@ -20,3 +20,17 @@ class CertificationView(ViewSet):
         certifications = Certification.objects.all().order_by("depth")
         serializer = CertificationSerializer(certifications, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def retrieve(self, request, pk):
+        """ Handles the GET request to a single certification, if the selected key is not found 404 is returned
+
+        Returns:
+            Response:JSON serialized list of the certification for the selected key
+        """
+
+        try:
+            certification = Certification.objects.get(pk=pk)
+            serializer = CertificationSerializer(certification)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Certification.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
