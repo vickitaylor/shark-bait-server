@@ -3,7 +3,7 @@
         "model": "sharkapi.assigneddive",
         "pk": 1,
         "fields": {
-            "guide": 1,
+            "guide": 2,
             "dive_request": 1
         }
     },
