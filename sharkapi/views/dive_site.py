@@ -54,3 +54,11 @@ class DiveSiteView(ViewSet):
 
         serializer = DiveSiteSerializer(site)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def destroy(self, request, pk):
+        """Handles the delete request for a dive site
+        """
+
+        site = DiveSite.objects.get(pk=pk)
+        site.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)

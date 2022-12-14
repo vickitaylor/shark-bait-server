@@ -49,3 +49,11 @@ class SkillLevelView(ViewSet):
 
         serializer = SkillLevelSerializer(skill)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def destroy(self, request, pk):
+        """Handles the delete request for a skill level
+        """
+
+        skill = SkillLevel.objects.get(pk=pk)
+        skill.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)

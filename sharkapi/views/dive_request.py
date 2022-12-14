@@ -58,3 +58,11 @@ class DiveRequestView(ViewSet):
 
         serializer = DiveRequestSerializer(dive_request)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def destroy(self, request, pk):
+        """Handles the delete request for a dive request
+        """
+
+        dive_request = DiveRequest.objects.get(pk=pk)
+        dive_request.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)

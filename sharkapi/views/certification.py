@@ -48,3 +48,11 @@ class CertificationView(ViewSet):
 
         serializer = CertificationSerializer(cert)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def destroy(self, request, pk):
+        """Handles the delete request for a certification
+        """
+
+        cert = Certification.objects.get(pk=pk)
+        cert.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
