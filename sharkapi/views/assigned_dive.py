@@ -33,5 +33,5 @@ class AssignedDiveView(ViewSet):
             assigned_dive = AssignedDive.objects.get(pk=pk)
             serializer = AssignedDiveSerializer(assigned_dive)
             return Response(serializer.data, status=status.HTTP_200_OK)
-        except assigned_dive.DoesNotExist as ex:
+        except AssignedDive.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
