@@ -11,12 +11,12 @@ class DiveSiteView(ViewSet):
     """ Shark Bait DiveSite View """
 
     def list(self, request):
-        """ Handles the GET request, to get all divesites from the database, sorted in ascending order by name.
+        """ Handles the GET request, to get all dive sites from the database, sorted in ascending order by name.
 
         Returns:
             Response: JSON serialized list of diveSites
         """
 
-        diveSites = DiveSite.objects.all().order_by("name")
-        serializer = DiveSiteSerializer(diveSites, many=True)
+        dive_sites = DiveSite.objects.all().order_by("name")
+        serializer = DiveSiteSerializer(dive_sites, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
