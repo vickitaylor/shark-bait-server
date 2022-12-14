@@ -20,3 +20,17 @@ class DiveSiteView(ViewSet):
         dive_sites = DiveSite.objects.all().order_by("name")
         serializer = DiveSiteSerializer(dive_sites, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def retrieve(self, request, pk):
+        """ Handles the GET request to a single dive site, if the selected key is not found 404 is returned
+
+        Returns:
+            Response:JSON serialized list of the dive site for the selected key
+        """
+
+        try:
+            site = DiveSite.objects.get(pk=pk)
+            serializer = DiveSiteSerializer(site)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except DiveSite.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)

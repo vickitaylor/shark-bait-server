@@ -17,6 +17,20 @@ class DiveRequestView(ViewSet):
             Response: JSON serialized list of dive requests
         """
 
-        diveRequests = DiveRequest.objects.all().order_by("date")
-        serializer = DiveRequestSerializer(diveRequests, many=True)
+        dive_requests = DiveRequest.objects.all().order_by("date")
+        serializer = DiveRequestSerializer(dive_requests, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def retrieve(self, request, pk):
+        """ Handles the GET request to a single dive request, if the selected key is not found 404 is returned
+
+        Returns:
+            Response:JSON serialized list of the dive request for the selected key
+        """
+
+        try:
+            request = DiveRequest.objects.get(pk=pk)
+            serializer = DiveRequestSerializer(request)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except DiveRequest.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
