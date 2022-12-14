@@ -23,12 +23,14 @@ from sharkapi.views import CertificationView
 from sharkapi.views import SkillLevelView
 from sharkapi.views import DiveSiteView
 from sharkapi.views import DiveRequestView
+from sharkapi.views import AssignedDiveView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'certifications', CertificationView, 'certification')
 router.register(r'skilllevels', SkillLevelView, 'skill')
 router.register(r'divesites', DiveSiteView, 'sites')
 router.register(r'diverequests', DiveRequestView, 'requests')
+router.register(r'assigneddives', AssignedDiveView, 'assigns')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

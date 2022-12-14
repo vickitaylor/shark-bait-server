@@ -3,3 +3,4 @@ from .certification import CertificationView
 from .skill_level import SkillLevelView
 from .dive_site import DiveSiteView
 from .dive_request import DiveRequestView
+from .assigned_dive import AssignedDiveView
