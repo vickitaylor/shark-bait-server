@@ -50,6 +50,20 @@ class SkillLevelView(ViewSet):
         serializer = SkillLevelSerializer(skill)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """ Handles the PUT request for the selected skill level. 
+
+        Returns:
+            Response: Empty body with a 204 status code
+        """
+
+        skill_level = SkillLevel.objects.get(pk=pk)
+
+        skill_level.skill = request.data["skill"]
+
+        skill_level.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     def destroy(self, request, pk):
         """Handles the delete request for a skill level
         """

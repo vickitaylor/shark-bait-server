@@ -49,6 +49,20 @@ class CertificationView(ViewSet):
         serializer = CertificationSerializer(cert)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """ Handles the PUT request for the selected certification. 
+
+        Returns:
+            Response: Empty body with a 204 status code
+        """
+
+        cert = Certification.objects.get(pk=pk)
+
+        cert.depth = request.data["depth"]
+
+        cert.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     def destroy(self, request, pk):
         """Handles the delete request for a certification
         """

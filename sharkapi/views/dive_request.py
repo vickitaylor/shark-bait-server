@@ -59,6 +59,26 @@ class DiveRequestView(ViewSet):
         serializer = DiveRequestSerializer(dive_request)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """ Handles the PUT request for the selected dive request 
+
+        Returns:
+            Response: Empty body with a 204 status code
+        """
+
+        dive = DiveRequest.objects.get(pk=pk)
+
+        dive.diver = Diver.objects.get(pk=request.data["diver"])
+        dive.dive_site = DiveSite.objects.get(pk=request.data["dive_site"])
+        dive.date = request.data["date"]
+        dive.certification = Certification.objects.get(pk=request.data["certification"])
+        dive.comments = request.data["comments"]
+        dive.completed = request.data["completed"]
+        dive.completed_comments = request.data["completed_comments"]
+
+        dive.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     def destroy(self, request, pk):
         """Handles the delete request for a dive request
         """

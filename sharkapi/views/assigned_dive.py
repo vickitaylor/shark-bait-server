@@ -53,6 +53,21 @@ class AssignedDiveView(ViewSet):
         serializer = AssignedDiveSerializer(assigned_dive)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """ Handles the PUT request for the selected assigned dive. 
+
+        Returns:
+            Response: Empty body with a 204 status code
+        """
+
+        assigned = AssignedDive.objects.get(pk=pk)
+
+        assigned.guide = Diver.objects.get(pk=request.data["guide"])
+        assigned.dive_request = DiveRequest.objects.get(pk=request.data["dive_request"])
+
+        assigned.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     def destroy(self, request, pk):
         """Handles the delete request for an assigned dive
         """

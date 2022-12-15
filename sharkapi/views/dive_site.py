@@ -55,6 +55,26 @@ class DiveSiteView(ViewSet):
         serializer = DiveSiteSerializer(site)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """ Handles the PUT request for the selected dive site. 
+
+        Returns:
+            Response: Empty body with a 204 status code
+        """
+
+        site = DiveSite.objects.get(pk=pk)
+
+        site.name = request.data["name"]
+        site.price = request.data["price"]
+        site.depth = request.data["depth"]
+        site.description = request.data['description']
+        site.picture_url = request.data["picture_url"]
+        site.fun_facts = request.data["fun_facts"]
+        site.will_see = request.data["will_see"]
+
+        site.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     def destroy(self, request, pk):
         """Handles the delete request for a dive site
         """
