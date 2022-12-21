@@ -74,12 +74,12 @@ class DiveRequestTests(APITestCase):
         url = f'/requests/{request.id}'
 
         updated_request = {
-            "diver": 1,
-            "dive_site": 5,
-            "date": "2022-12-01",
-            "certification": 2,
-            "comments": "",
-            "completed": False,
+            "diver": request.diver.id,
+            "dive_site": request.dive_site.id,
+            "date": request.date,
+            "certification": request.certification.id,
+            "comments": request.comments,
+            "completed": request.completed,
             "completed_comments": "comments added"
         }
 
