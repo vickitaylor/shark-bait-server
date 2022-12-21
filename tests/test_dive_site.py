@@ -76,12 +76,12 @@ class DiveSiteTests(APITestCase):
 
         updated_site = {
             "name": f'{site.name} updated',
-            "price": 120,
-            "depth": 40,
-            "description": "test",
-            "picture_url": "test.jpg",
-            "fun_facts": "test",
-            "will_see": "test"
+            "price": site.price,
+            "depth": site.depth,
+            "description": site.description,
+            "picture_url": site.picture_url,
+            "fun_facts": site.fun_facts,
+            "will_see": site.will_see
         }
 
         response = self.client.put(url, updated_site, format='json')
